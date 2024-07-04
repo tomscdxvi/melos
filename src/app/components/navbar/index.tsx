@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
@@ -8,10 +8,11 @@ import { faMoon } from "@fortawesome/free-regular-svg-icons";
 import { IoMoon } from "react-icons/io5";
 import { IoSunny } from "react-icons/io5";
 import { IconContext } from "react-icons";
+import { StyleContext } from '../../contexts/StyleContext';
 
 
 const navigation = [
-    { name: 'Dashboard', href: '#', current: false },
+    { name: 'Dashboard', href: '/dashboard', current: false },
     { name: 'Team', href: '#', current: false },
     { name: 'Projects', href: '#', current: false },
     { name: 'Calendar', href: '#', current: false },
@@ -23,7 +24,9 @@ function classNames(...classes: string[]) {
 
 export const NavBar = () => {
 
-    const [dark, setDark] = useState(false);
+    const isDark = useContext(StyleContext);
+
+    const [dark, setDark] = useState(isDark);
 
     const darkModeHandler = () => {
         setDark(!dark);
@@ -46,7 +49,7 @@ export const NavBar = () => {
                     </div>
                     <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                         <div className="flex flex-shrink-0 items-center">
-                            <p className='text-white dark:text-gray-900'>Logo</p>
+                            <a href="/" className='text-white dark:text-gray-900'>Logo</a>
                             {/*
                             <img
                                 alt="Logo"

@@ -10,7 +10,7 @@ export default function Page() {
             <div className="w-full">
                 <NavBar />
             </div>
-      </div>
+        </div>
     )
 
 }

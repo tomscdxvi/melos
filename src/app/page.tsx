@@ -1,13 +1,22 @@
+'use client';
+
+import { useContext } from 'react';
 import Image from "next/image";
 import { NavBar } from "./components/navbar";
+import { StyleContext } from './contexts/StyleContext';
 
 export default function Home() {
   return (
     <>
-      <NavBar />
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <div className="h-screen">
+          <div className="w-full">
+              <NavBar />
+          </div>
 
-      </main>
+          <div className='bg-white h-screen dark:bg-gray-800'>
+            <p>hello</p>
+          </div>
+      </div>
     </>
   );
 }
