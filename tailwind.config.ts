@@ -32,6 +32,13 @@ const config: Config = {
 
       "2xl": '1536px',
       // => @media (min-width: 1536px) { ... }
+    },
+    fontFamily: {
+      'sans': ['ui-sans-serif', 'system-ui'],
+      'serif': ['ui-serif', 'Georgia'],
+      'mono': ['ui-monospace', 'SFMono-Regular'],
+      'oswald': ['Oswald'],
+      'open': ['Open Sans'],
     }
   },
   plugins: [],

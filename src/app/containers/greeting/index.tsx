@@ -3,24 +3,57 @@
 import DisplayLottie from '@/app/components/displayLottie/DisplayLottie';
 import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
-import astronautMusic from '../../assets/lotties/astronautMusic.json'
-import { StyleContext } from '../../contexts/StyleContext';
+import tw from 'twin.macro';
+import processAnimation from '../../assets/lotties/processAnimation.json';
+import { StyleContext } from '../../contexts/StyleContext';;
+import { SCREENS } from '@/app/utils/responsive';
+
+const TopSectionContainer = styled.div`
+    ${tw`
+        h-screen
+        w-screen
+        bg-white
+        dark:bg-gray-800
+    `}
+`;
+
+const LeftContainer = styled.div`
+    ${tw`
+ 
+    `}
+`;
+
+const RightContainer = styled.div`
+    ${tw`
+        flex
+        justify-center
+        items-center
+    `}
+`;
+
+
+const LottieContainer = styled.div`
+    ${tw`
+        pt-12
+        w-5/6
+    `}
+`;
 
 export default function Greeting() {
     return (
-        <div className='bg-white flex justify-between w-full pl-12 pr-12 dark:bg-slate-900'>
-            <div id='left_container' className='w-56 flex flex-col'>
-                <h1 className='font-bold text-2xl text-black mb-4 transition duration-500 ease-in-out hover:text-purple-800 sm:text-3xl sm:leading-snug md:text-5xl md:font-extrabold lg:font-black lg:leading-normal xl:text-6xl xl:leading-relaxed'>
-                    Melos
-                </h1>
-                <p className='text-xs overflow-hidden max-h-12 text-gray-800 sm:max-h-full lg:text-sm xl:text-lg'>
-                    hello!
+        <TopSectionContainer>
+            <LeftContainer>
+                <h1 className='flex justify-center items-center pt-24 text-5xl font-open font-bold text-gray-900 dark:text-white'>Melos</h1>
+                <p className='flex justify-center items-center text-lg font-sans pt-6 text-gray-800 dark:text-white'>
+                    Revamp your online presence with Melos!
                 </p>
-            </div>
+            </LeftContainer>
 
-            <div id="right_container" className="w-2/5 flex flex-col relative">
-                <DisplayLottie animationData={astronautMusic} />
-            </div>
-        </div>
+            <RightContainer>
+                <LottieContainer>
+                    <DisplayLottie animationData={processAnimation} />
+                </LottieContainer>
+            </RightContainer>
+        </TopSectionContainer>
     )
 }
