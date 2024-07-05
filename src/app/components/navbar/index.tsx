@@ -29,6 +29,7 @@ export const NavBar = () => {
     const [dark, setDark] = useState(isDark);
 
     const darkModeHandler = () => {
+
         setDark(!dark);
 
         document.body.classList.toggle("dark");

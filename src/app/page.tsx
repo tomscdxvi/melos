@@ -4,19 +4,18 @@ import { useContext } from 'react';
 import Image from "next/image";
 import { NavBar } from "./components/navbar";
 import { StyleContext } from './contexts/StyleContext';
+import Greeting from './containers/greeting';
 
 export default function Home() {
   return (
     <>
-      <div className="h-screen">
-          <div className="w-full">
-              <NavBar />
-          </div>
+        <div className="h-screen">
+            <div className="w-full">
+                <NavBar />
+            </div>
 
-          <div className='bg-white h-screen dark:bg-gray-800'>
-            <p>hello</p>
-          </div>
-      </div>
-    </>
-  );
+                <Greeting />
+            </div>
+        </>
+    );
 }
