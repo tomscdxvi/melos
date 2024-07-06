@@ -1,14 +1,14 @@
 'use client';
 
-import DisplayLottie from '@/app/components/displayLottie/DisplayLottie';
+import DisplayLottie from '@/components/displayLottie/DisplayLottie';
 import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import designAnimation from '../../../assets/lotties/designAnimation.json';
 import { StyleContext } from '../../../contexts/StyleContext';;
-import { SCREENS } from '@/app/utils/responsive';
+import { SCREENS } from '@/utils/responsive';
 import emoji from 'react-easy-emoji';
-import { TestimonialCard } from '@/app/components/card';
+import { TestimonialCard } from '@/components/card';
 
 const MainContainer = styled.div`
     ${tw`
@@ -47,7 +47,7 @@ export default function Testimonials() {
         },
         {
             name: "John from Star Barber",
-            description: "They created exactly what I had in mind and since my previous website was slow and didn't look up-to-date, I really needed a change quick.",
+            description: "They created exactly what I had in mind and allowed me to be a part of the entire process.",
             tags: ["#communication", "#friendly", "#cooperative"]
         },
         {

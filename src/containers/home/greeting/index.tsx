@@ -1,12 +1,12 @@
 'use client';
 
-import DisplayLottie from '@/app/components/displayLottie/DisplayLottie';
+import DisplayLottie from '@/components/displayLottie/DisplayLottie';
 import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import processAnimation from '../../../assets/lotties/processAnimation.json';
 import { StyleContext } from '../../../contexts/StyleContext';;
-import { SCREENS } from '@/app/utils/responsive';
+import { SCREENS } from '@/utils/responsive';
 
 const MainContainer = styled.div`
     ${tw`

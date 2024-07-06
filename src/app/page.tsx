@@ -2,12 +2,12 @@
 
 import { useContext } from 'react';
 import Image from "next/image";
-import { NavBar } from "./components/navbar";
-import { StyleContext } from './contexts/StyleContext';
-import Greeting from './containers/home/greeting';
-import WorkWithUs from './containers/home/work-with-us';
-import Testimonials from './containers/home/testimonials';
-import Footer from './components/footer';
+import { NavBar } from "../components/navbar";
+import { StyleContext } from '../contexts/StyleContext';
+import Greeting from '../containers/home/greeting';
+import WorkWithUs from '../containers/home/work-with-us';
+import Testimonials from '../containers/home/testimonials';
+import Footer from '../components/footer';
 
 export default function Home() {
   return (
