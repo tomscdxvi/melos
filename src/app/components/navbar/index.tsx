@@ -15,7 +15,7 @@ const navigation = [
     { name: 'Dashboard', href: '/dashboard', current: false },
     { name: 'Team', href: '#', current: false },
     { name: 'Projects', href: '#', current: false },
-    { name: 'Calendar', href: '#', current: false },
+    { name: 'Contact', href: '#', current: false },
 ]
   
 function classNames(...classes: string[]) {
@@ -86,7 +86,7 @@ export const NavBar = () => {
                         </button>
                         */}
 
-                        {/* Profile dropdown */}
+                        {/* Profile dropdown 
                         <Menu as="div" className="relative ml-4 mr-4">
                             <div>
                                 <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -117,6 +117,7 @@ export const NavBar = () => {
                                 </MenuItem>
                             </MenuItems>
                         </Menu>
+                        */}
                         <button onClick={()=> darkModeHandler()}>{dark && <IoSunny size={24} /> }{!dark && <IoMoon color='white' size={24} /> }</button>
                     </div>
                 </div>
