@@ -1,5 +1,10 @@
 {
     "presets": ["next/babel"],
+    "env": {
+        "development" : {
+          "compact": false
+        }
+    },
     "plugins": [
         ["styled-components", { "ssr": true }],
         ["babel-plugin-twin", { "debug": false }],
