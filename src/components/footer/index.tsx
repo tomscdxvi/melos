@@ -20,7 +20,7 @@ export default function Footer() {
                         <a href="#" className="hover:underline me-4 md:me-6">Careers</a>
                     </li>
                     <li>
-                        <a href="#" className="hover:underline">Contact</a>
+                        <a href="/contact" className="hover:underline">Contact</a>
                     </li>
                 </ul>
             </div>
