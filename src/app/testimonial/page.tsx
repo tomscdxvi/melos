@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { NavBar } from "../../components/navbar";
+import { Form } from '@/containers/testimonial/form';
 
 export default function Page() {
     
@@ -12,7 +13,7 @@ export default function Page() {
             </div>
 
             <div className='dark:bg-gray-800'>
-                <p>hello</p>
+                <Form />
             </div>
         </div>
     )

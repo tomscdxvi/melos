@@ -16,8 +16,12 @@ export default function Footer() {
                     <li>
                         <a href="#" className="hover:underline me-4 md:me-6">Privacy Policy</a>
                     </li>
+                    {/*
                     <li>
                         <a href="#" className="hover:underline me-4 md:me-6">Careers</a>
+                    </li> */}
+                    <li>
+                        <a href="/testimonial" className="hover:underline me-4 md:me-6">Testimonial</a>
                     </li>
                     <li>
                         <a href="/contact" className="hover:underline">Contact</a>

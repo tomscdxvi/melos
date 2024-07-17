@@ -1,28 +1,22 @@
 
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
-// import winston, { transport } from 'winston';
 
-/*
-const logger = winston.createLogger({
-    level: 'debug',
-    format: winston.format.json(),
-    transports: [new winston.transports.Console()]
-});
-*/
-
+// Type Definitions for EmailData
 type EmailData = {
     from : string,
     subject : string,
     message : string
 }
 
+// POST Route 
 export async function POST(data : EmailData) {
 
     try {
 
         const { from, subject, message } = data;
 
+        // Create the Transport service
         const transport = nodemailer.createTransport({
             host: process.env.EMAIL_HOST,
             port : Number(process.env.EMAIL_PORT),
@@ -32,7 +26,7 @@ export async function POST(data : EmailData) {
                 pass: process.env.USER_PASSWORD
             }
         });
-
+        
         const mailOptions = {
             from: from,
             to: process.env.RECIPIENT_EMAIL,
@@ -40,8 +34,6 @@ export async function POST(data : EmailData) {
             html: message,
             message: message
         }
-
-        // logger.info(`Sending Email to: ${to}`);
         
         await transport.sendMail(mailOptions);
 

@@ -1,11 +1,13 @@
 import { FC } from "react";
 
+// Interface for Prop Data
 interface TestimonialCardProps {
     name: String,
     description: String,
     tags: String[]
 }
 
+// Function Component of TestimonialCard taking in the prop data
 export const TestimonialCard: FC<TestimonialCardProps> = (props): JSX.Element => {
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg mr-12 dark:bg-white">

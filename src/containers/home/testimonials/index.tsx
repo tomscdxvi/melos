@@ -27,19 +27,10 @@ const ContentContainer = styled.div`
     `}
 `;
 
-const LottieContainer = styled.div`
-    ${tw`
-        pt-12
-        w-5/6
-        xl:w-1/2
-        xl:ml-64
-        xl:pt-0
-    `}
-`;
 
 export default function Testimonials() {
 
-    const testimonial = [
+    const testimonials = [
         {
             name: "Sarah from Avalanche",
             description: "Melos was quick and gave me the chance to put my creative add-ons to my new website.",
@@ -63,14 +54,19 @@ export default function Testimonials() {
             <ContentContainer>
                 <h1 className='flex justify-center items-center pt-24 text-5xl font-open font-bold text-gray-900 xl:text-8xl xl:pt-0 dark:text-white'>
                     Testimonials
-                </h1>
-                <p className='flex justify-center items-center text-lg font-sans pt-6 text-gray-800 xl:text-2xl dark:text-white'>
-                    Hear back from our valued customers and see what they have to say about Melos!
-                </p>
+                </h1>  
+                <div className='pt-6'>
+                    <p className='flex justify-center items-center text-gray-800 xl:text-2xl dark:text-white'>
+                        Hear back from our valued customers and see what they have to say about Melos!
+                    </p>
+                    <p className='flex justify-center items-center  text-gray-800 pt-4 xl:text-2xl dark:text-white'>
+                        Worked with us before? Let others know about your experience&nbsp;<a href="/testimonial" className='text-blue-600 hover:underline dark:text-blue-300'>here</a>.
+                    </p>
+                </div>
                 <div className='flex justify-center items-center mt-24'>
-                    <TestimonialCard name={testimonial[0].name} description={testimonial[0].description} tags={testimonial[0].tags} />
-                    <TestimonialCard name={testimonial[1].name} description={testimonial[1].description} tags={testimonial[1].tags} />
-                    <TestimonialCard name={testimonial[2].name} description={testimonial[2].description} tags={testimonial[2].tags} />
+                    <TestimonialCard name={testimonials[0].name} description={testimonials[0].description} tags={testimonials[0].tags} />
+                    <TestimonialCard name={testimonials[1].name} description={testimonials[1].description} tags={testimonials[1].tags} />
+                    <TestimonialCard name={testimonials[2].name} description={testimonials[2].description} tags={testimonials[2].tags} />
                 </div>
             </ContentContainer>
         </MainContainer>
